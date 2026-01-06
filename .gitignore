@@ -1,0 +1,13 @@
+.idea/
+__pycache__/
+venv/
+.DS_Store
+models/
+
+dataset_brand/
+dataset_split/
+dataset_split_12class/
+dataset_split_9class/
+augment_input/
+test_photos/
+models/
