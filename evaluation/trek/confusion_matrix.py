@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 
-# Klasy (w tej samej kolejności jak w ImageFolder!)
+# Klasy 
 classes = ['domane', 'emonda', 'madone']
 data_dir = 'dataset_split/trek/val'
 batch_size = 16
