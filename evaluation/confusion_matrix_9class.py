@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 classes = ['aeroad', 'aethos', 'domane', 'emonda', 'endurance', 'madone', 'roubaix', 'tarmac', 'ultimate']
 
 # Ścieżka do danych walidacyjnych
-data_dir = '../dataset_split_9class/val'  # <-- zmień jeśli masz inną nazwę folderu
+data_dir = '../dataset_split_9class/val'  
 batch_size = 16
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -24,7 +24,7 @@ transform = transforms.Compose([
 val_dataset = datasets.ImageFolder(data_dir, transform=transform)
 val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 
-# Wczytanie modelu (np. ResNet50)
+# Wczytanie modelu
 model = models.resnet50(pretrained=False)
 model.fc = torch.nn.Linear(model.fc.in_features, len(classes))
 model.load_state_dict(torch.load("../models/unified/resnet50_allbrands.pth", map_location=device))
