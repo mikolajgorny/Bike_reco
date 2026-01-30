@@ -64,7 +64,7 @@ def predict_combined(image_path):
     best_brand, (best_model, best_confidence) = max(predictions.items(), key=lambda x: x[1][1])
 
     # Wyświetlenie wyniku
-    print(f"🧠 Predykcja: {best_brand.upper()} {best_model.upper()} ({best_confidence * 100:.2f}%)")
+    print(f" Predykcja: {best_brand.upper()} {best_model.upper()} ({best_confidence * 100:.2f}%)")
 
 # PRZYKŁAD UŻYCIA:
 print("specialized roubaix")
