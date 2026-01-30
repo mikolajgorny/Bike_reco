@@ -3,8 +3,8 @@ from torch.utils.data import DataLoader
 import torch
 from sklearn.metrics import classification_report
 
-# Wybierz markę i ścieżki
-brand = 'canyon'  # lub 'canyon', 'specialized'
+
+brand = 'canyon'  
 val_dir = f'../dataset_split/{brand}/val'
 model_path = f'../models/canyon/resnet50_canyon_finetuned.pth'
 
