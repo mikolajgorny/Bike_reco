@@ -8,7 +8,7 @@ import torch
 input_folder = 'dataset_split/train/madone'  # Folder z oryginalnymi zdjęciami Madone
 output_folder = 'dataset_split/train/madone_augmented'  # Folder na nowe zaugumentowane zdjęcia
 
-# Tworzymy folder wyjściowy, jeśli nie istnieje
+# Folder wyjściowy
 os.makedirs(output_folder, exist_ok=True)
 
 # Augmentacje: losowe przycięcia, rotacje, flip, zmiana kontrastu
@@ -21,7 +21,7 @@ transform = transforms.Compose([
 ])
 
 # Liczba zaugumentowanych zdjęć
-num_augmented_images = 100  # Zmienna liczba obrazów do augmentacji (np. 100)
+num_augmented_images = 100 
 
 # Funkcja do augmentacji
 def augment_images():
@@ -43,6 +43,6 @@ def augment_images():
         augmented_image.save(os.path.join(output_folder, f"augmented_{i}.jpg"))
         print(f"Augmentacja {i + 1}/{num_augmented_images} zakończona.")
 
-# Uruchamiamy augmentację
+
 augment_images()
 print("Augmentacja zakończona. Wszystkie zdjęcia zapisane w:", output_folder)
