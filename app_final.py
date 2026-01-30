@@ -68,8 +68,8 @@ transform = transforms.Compose([
 # FUNKCJA PREDYKCJI
 # ======================
 
-# Wczytaj gotowy model YOLO (na COCO - wykrywa rowery jako 'bicycle')
-detector = YOLO("yolov8n.pt")  # możesz też użyć yolov5s, yolov8s itd.
+# Gotowy model YOLO
+detector = YOLO("yolov8n.pt")  
 
 def contains_bicycle(image_pil):
     results = detector(image_pil, verbose=False)
