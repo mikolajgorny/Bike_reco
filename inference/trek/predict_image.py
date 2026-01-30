@@ -6,7 +6,7 @@ from PIL import Image
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 classes = ['domane', 'emonda', 'madone']  # Nazwy klas
 
-# Przygotowanie obrazu (musi być tak samo przetwarzany jak w walidacji!)
+# Przygotowanie obrazu
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
@@ -36,6 +36,6 @@ def predict(image_path):
     print(f"🧠 Predicted: {predicted_class.upper()} ({confidence:.2f}%)")
 
 # Przykład użycia
-predict("test_photos/test_photos_trek/domane1.png")  # <- Podmień nazwę pliku, jeśli inna
-#predict("emonda1.png")  # <- Podmień nazwę pliku, jeśli inna
-#predict("madone1.png")  # <- Podmień nazwę pliku, jeśli inna
+predict("test_photos/test_photos_trek/domane1.png")  
+#predict("emonda1.png")  
+#predict("madone1.png")  
