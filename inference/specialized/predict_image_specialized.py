@@ -36,4 +36,4 @@ def predict(image_path):
     print(f"🧠 Predicted: {predicted_class.upper()} ({confidence:.2f}%)")
 
 # Przykład użycia
-predict("test_photos/test_photos_specialized/roubaix3.png")  # <- zmień ścieżkę na swój obrazek!
+predict("test_photos/test_photos_specialized/roubaix3.png") 
