@@ -30,7 +30,7 @@ model = model.to(device)
 model.eval()
 
 # Ładowanie danych
-val_dir = "../../dataset_split/trek/val"  # Zakładając, że masz folder z danymi walidacyjnymi
+val_dir = "../../dataset_split/trek/val"  
 val_data = datasets.ImageFolder(val_dir, transform=transform)
 val_loader = DataLoader(val_data, batch_size=batch_size, shuffle=False)
 
